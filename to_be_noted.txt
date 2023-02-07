@@ -1,0 +1,14 @@
+Gp and rolling_window values for each dataset:
+	- Generally, values are 500 and 1000 instances respectively. However, some datasets include lower number of instances and they are lower.
+	- For ENRON dataset, 100 and 100 are these values.
+	- For Cardio, 75 and 100.
+	- For Bias: 250 and 500.
+	- For Garment: 30 and 60. 
+
+In all datasets, categorical variables are transformed using One Hot Encoder. Moreover, datatime is changed to timestamp. Specifically, some extra information is necessary:
+	- In Postures, missing values are replaced by 0.
+	- In Sgemm first run is used as target.
+	- In Transcoding, utime is used as target. id and umem are not taken into account.
+	- In Bias, first, second and last columns are removed. Next_Tmax is the target.
+	- In Tetuan, Zone 1 is used as target.
+	- In Garment, Nas values are replaced by -200.
